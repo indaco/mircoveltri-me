@@ -1,0 +1,16 @@
+baseURL = "./"
+disableAliases = true
+disableHugoGeneratorInject = true
+languageCode = "en-us"
+
+# Theme
+theme = "basic"
+# GoogleAnalytic
+#googleAnalytics = ""
+
+enableRobotsTXT = true
+canonifyURLs = true
+enableEmoji = false
+
+[build]
+  writeStats = true

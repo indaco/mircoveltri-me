@@ -1,0 +1,47 @@
+{
+  "name": "mircoveltri-me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev-server": "hugo server -D",
+    "start": "hugo --gc",
+    "build": "rm -rf public && hugo --gc --minify",
+    "lint": "npm run -s lint:scripts && npm run -s lint:markdown",
+    "lint:scripts": "eslint themes/nsanetails/assets/js",
+    "lint:markdown": "markdownlint *.md content/**/*.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indaco/mircoveltri-me.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/indaco/mircoveltri-me/issues"
+  },
+  "homepage": "https://github.com/indaco/mircoveltri-me#readme",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "github:fullhuman/postcss-purgecss",
+    "@tailwindcss/typography": "^0.4.1",
+    "autoprefixer": "^10.3.2",
+    "eslint": "^7.32.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "markdownlint-cli": "^0.27.1",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.0.2",
+    "prettier": "^2.3.2",
+    "tailwindcss": "^2.2.7"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ],
+  "dependencies": {
+    "@alpine-collective/toolkit-scroll": "^1.0.0"
+  }
+}
