@@ -4,7 +4,9 @@
   class="flex flex-col items-center justify-center w-full px-5 py-12 mx-auto text-gray-600 "
 >
   <div class="max-w-xl">
-    <div class="mx-auto mb-12 prose text-left md:prose-xl">{{ .Content }}</div>
+    <div class="mx-auto mb-12 prose text-justify md:prose-xl">
+      {{ .Content }}
+    </div>
 
     {{ partial "socials-buttons.html" . }}
   </div>
