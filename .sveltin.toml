@@ -1,0 +1,5 @@
+baseURL = "http://mircoveltri.me"
+
+[sitemap]
+changeFreq = "yearly"
+priority = 0.5
