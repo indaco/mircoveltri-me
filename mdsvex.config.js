@@ -1,46 +1,22 @@
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
-
 import relativeImages from 'mdsvex-relative-images';
-import preview, { textFormatter, htmlFormatter } from 'remark-preview';
-
 import emoji from 'remark-emoji';
-import remarkSlug from 'remark-slug';
 import rehypeAutoLinkHeadings from 'rehype-autolink-headings';
+import rehypeExternalLinks from 'rehype-external-links';
 import rehypeSlug from 'rehype-slug';
-import headings from './src/lib/utils/headings.js';
+import headings from '@sveltinio/remark-headings';
 
-export const mdsvexConfig = {
+const mdsvexConfig = {
 	extensions: ['.svelte.md', '.md', '.svx'],
 	smartypants: {
 		dashes: 'oldschool'
 	},
-	remarkPlugins: [
-		remarkSlug,
-		headings,
-		emoji,
-		relativeImages,
-		// Add an HTML preview snippet (formatted).
-		// It is used on the RSS feed
-		preview(
-			textFormatter({
-				length: 50
-			}),
-			htmlFormatter({
-				length: 200,
-				maxBlocks: 1
-			}),
-			{
-				attribute: 'previewHtml'
-			}
-		)
-	],
+
+	remarkPlugins: [headings, emoji, relativeImages],
 	rehypePlugins: [
-		rehypeSlug[
-			(rehypeAutoLinkHeadings,
-			{
-				behavior: 'wrap'
-			})
-		]
+		rehypeSlug,
+		[rehypeAutoLinkHeadings, { behavior: 'wrap' }],
+		[rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] }]
 	]
 };
+
+export default mdsvexConfig;

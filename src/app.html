@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		%svelte.head%
+		<meta
+			name="robots"
+			content="index,follow,max-snippet:-1,max-image-preview:large,noarchive,max-video-preview:-1"
+		/>
+		<meta
+			name="googlebot"
+			content="index,follow,max-snippet:-1,max-image-preview:large,noarchive,max-video-preview:-1"
+		/>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" href="%sveltekit.assets%/images/icons/favicon.ico" sizes="any" />
+		%sveltekit.head%
 	</head>
-	<body class="font-body">
-		<div id="svelte">%svelte.body%</div>
+	<body class="h-full" data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>

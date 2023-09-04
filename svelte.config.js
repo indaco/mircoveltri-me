@@ -1,47 +1,34 @@
-import path from 'path';
-
-import { mdsvex } from 'mdsvex';
-import { mdsvexConfig } from './mdsvex.config.js';
-
-import preprocess from 'svelte-preprocess';
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import adapter from '@sveltejs/adapter-static';
+import preprocess from 'svelte-preprocess';
+import { mdsvex } from 'mdsvex';
+import mdsvexConfig from './mdsvex.config.js';
+
+const sveltinJsonFile = fileURLToPath(new URL('sveltin.json', import.meta.url));
+const sveltinJson = readFileSync(sveltinJsonFile, 'utf8');
+const { sveltekit } = JSON.parse(sveltinJson);
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	extensions: ['.svelte', ...mdsvexConfig.extensions],
-	// Consult https://github.com/sveltejs/svelte-preprocess
-	// for more information about preprocessors
 	preprocess: [
 		mdsvex(mdsvexConfig),
 		preprocess({
-			postcss: true,
 			preserve: ['ld+json']
 		})
 	],
 	kit: {
 		adapter: adapter({
-			// default options are shown
-			pages: 'build',
-			assets: 'build',
-			fallback: null
+			pages: sveltekit.adapter.pages,
+			assets: sveltekit.adapter.assets,
+			fallback: sveltekit.adapter.fallback,
+			precompress: sveltekit.adapter.precompress,
+			strict: sveltekit.adapter.strict
 		}),
-		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte',
-		vite: {
-			resolve: {
-				alias: {
-					$config: path.resolve('config'),
-					$content: path.resolve('content'),
-					$data: path.resolve('src/data'),
-					$lib: path.resolve('src/lib'),
-					$partials: path.resolve('src/partials'),
-					$components: path.resolve('src/components'),
-					$theme: path.resolve('src/themes')
-				}
-			},
-			optimizeDeps: {
-				include: ['@indaco/svelte-iconoir']
-			}
+		prerender: {
+			crawl: true,
+			entries: ['*']
 		}
 	}
 };
