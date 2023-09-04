@@ -16,7 +16,7 @@
 	"devDependencies": {
 		"@indaco/svelte-iconoir": "^4.6.0",
 		"@sveltejs/adapter-static": "2.0.3",
-		"@sveltejs/kit": "1.24.0",
+		"@sveltejs/kit": "^1.24.1",
 		"@sveltinio/remark-headings": "^1.0.3",
 		"@sveltinio/seo": "^0.4.2",
 		"@sveltinio/services": "^0.4.2",
@@ -43,12 +43,12 @@
 		"rehype-external-links": "^2.1.0",
 		"rehype-slug": "^5.1.0",
 		"remark-emoji": "^3.1.2",
-		"rimraf": "^5.0.0",
+		"rimraf": "^5.0.1",
 		"svelte": "^4.2.0",
 		"svelte-check": "^3.5.1",
 		"svelte-preprocess": "^5.0.4",
 		"tailwindcss": "^3.3.3",
-		"tslib": "^2.5.0",
+		"tslib": "^2.6.2",
 		"typescript": "^5.2.2",
 		"unist-util-visit": "^4.1.2",
 		"vite": "^4.4.9"
