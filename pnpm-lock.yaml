@@ -18,8 +18,8 @@ importers:
         specifier: ^2.20.3
         version: 2.20.3(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.25.6)(vite@6.2.4(@types/node@22.13.17)(jiti@2.4.2)(lightningcss@1.29.2)))(svelte@5.25.6)(vite@6.2.4(@types/node@22.13.17)(jiti@2.4.2)(lightningcss@1.29.2))
       '@sveltinio/seo':
-        specifier: ^0.4.3
-        version: 0.4.3(svelte@5.25.6)
+        specifier: ^0.4.4
+        version: 0.4.4(svelte@5.25.6)
       '@tailwindcss/typography':
         specifier: ^0.5.16
         version: 0.5.16(tailwindcss@4.1.1)
@@ -485,10 +485,10 @@ packages:
       svelte: ^5.0.0
       vite: ^6.0.0
 
-  '@sveltinio/seo@0.4.3':
-    resolution: {integrity: sha512-8oYVLd9LD+ts1H+q0h1/2a+/BQ5C82iJoOc30GebexRsv0WMeLJaj3CPOf95cABK+4oAZXp0pUDGvwJ2AJoGyg==}
+  '@sveltinio/seo@0.4.4':
+    resolution: {integrity: sha512-UJfEekycE32UcmXe0TxMiL2pWk+O/fp3M/fPeyy8qzuRc2lWz/gdFhzUqDy4F/Cfr8OhUTQJ+JVHOfDRlLYL3A==}
     peerDependencies:
-      svelte: ^3.59.2 || ^4.0.0
+      svelte: ^3.59.2 || ^4.0.0 || ^5.0.0
 
   '@sveltinio/ts-utils@0.8.0':
     resolution: {integrity: sha512-QrSqBLeeDljRjbLX4uZFP5MQEdV/1d+pPwIHEWAYX7Md1DdG4QnVhIVh7yUE4OeutUu5+CK3bDxQI2Ofz7yG6w==}
@@ -1918,7 +1918,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@sveltinio/seo@0.4.3(svelte@5.25.6)':
+  '@sveltinio/seo@0.4.4(svelte@5.25.6)':
     dependencies:
       '@sveltinio/ts-utils': 0.8.0
       schema-dts: 1.1.5
