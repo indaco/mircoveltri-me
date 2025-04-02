@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { website } from '$config/website.js';
-	import SocialLogos from '$themes/basic/components/SocialLogos.svelte';
+	import { website } from 'config/website.js';
+	import SocialLogos from 'themes/basic/components/SocialLogos.svelte';
 </script>
 
 <svelte:head>

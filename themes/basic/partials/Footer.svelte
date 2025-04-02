@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { website } from '$config/website.js';
+	import { website } from 'config/website.js';
 	import Cite from '../components/Cite.svelte';
 </script>
 
@@ -16,7 +16,7 @@
 					href="https://iconoir.com"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="underline">Iconoir</a
+					class="underline">iconoir</a
 				>
 				via
 				<a
@@ -24,7 +24,7 @@
 					href="https://www.npmjs.com/package/@indaco/svelte-iconoir"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="underline">Svelte-Iconoir</a
+					class="underline">svelte-iconoir</a
 				>
 			</p>
 		</div>

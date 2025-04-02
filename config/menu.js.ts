@@ -1,4 +1,4 @@
-import type { Sveltin } from '$sveltin';
+import type { Sveltin } from '../src/sveltin';
 
 const menu: Array<Sveltin.MenuItem> = [
 	{

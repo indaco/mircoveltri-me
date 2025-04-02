@@ -1,17 +1,7 @@
-/** @type {import('tailwindcss').Config}*/
-const config = {
-	content: ['./src/**/*.{html,js,svelte,ts}', './themes/**/*.{html,js,svelte,ts}'],
+/** @type {import('tailwindcss').Config} */
+module.exports = {
 	theme: {
 		extend: {
-			screens: {
-				xxs: '320px',
-				xs: '475px'
-			},
-			fontFamily: {
-				sans: ['Roboto', 'sans-serif'],
-				display: ['Roboto', 'sans-serif'],
-				body: ['Roboto', 'sans-serif']
-			},
 			typography: {
 				DEFAULT: {
 					css: {
@@ -23,8 +13,5 @@ const config = {
 				}
 			}
 		}
-	},
-	plugins: [require('@tailwindcss/typography')]
+	}
 };
-
-module.exports = config;

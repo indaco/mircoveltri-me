@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
 import { sveltekit } from '@sveltejs/kit/vite';
+import tailwindcss from '@tailwindcss/vite';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -35,7 +36,7 @@ const config = defineConfig({
 			$themes: resolve(join(__dirname, './themes'))
 		}
 	},
-	plugins: [sveltekit()]
+	plugins: [tailwindcss(), sveltekit()]
 });
 
 export default config;

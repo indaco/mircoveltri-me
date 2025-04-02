@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+@config '../tailwind.config.cjs';
+
+@theme {
+	--breakpoint-xxs: 320px;
+	--breakpoint-xs: 475px;
+
+	--font-sans: IBM Plex Sans, sans-serif;
+	--font-display: IBM Plex Sans, sans-serif;
+	--font-body: IBM Plex Sans, sans-serif;
+}

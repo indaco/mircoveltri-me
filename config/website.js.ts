@@ -1,5 +1,5 @@
 import { name, baseurl } from '../sveltin.json';
-import type { Sveltin } from '$sveltin';
+import type { Sveltin } from '../src/sveltin';
 
 const website: Sveltin.WebSite = {
 	name: name,

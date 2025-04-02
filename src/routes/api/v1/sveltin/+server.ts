@@ -1,5 +1,5 @@
 import type { RequestHandler } from './$types';
-import { sveltinVersion, sveltekitVersion, buildTime } from '$config/defaults.js';
+import { sveltinVersion, sveltekitVersion, buildTime } from 'config/defaults.js';
 
 export const prerender = true;
 

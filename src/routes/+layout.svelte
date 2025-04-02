@@ -1,16 +1,14 @@
 <script lang="ts">
-	import '../app.postcss';
-	import { googleFonts } from '$config/externals.js';
-	import { GoogleFonts } from '@sveltinio/services/google';
-	import Seo from '$themes/basic/components/Seo.svelte';
-	import Footer from '$themes/basic/partials/Footer.svelte';
-</script>
+	import '../app.css';
+	import Seo from 'themes/basic/components/Seo.svelte';
+	import Footer from 'themes/basic/partials/Footer.svelte';
 
-<GoogleFonts fonts={googleFonts} />
+	let { children } = $props();
+</script>
 
 <Seo />
 <div class="relative content">
-	<slot />
+	{@render children?.()}
 
 	<Footer />
 </div>

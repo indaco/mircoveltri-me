@@ -9,20 +9,7 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": false,
-		"outDir": "./build",
-		"paths": {
-			"$sveltin": ["./src/sveltin"],
-			"$lib": ["./src/lib"],
-			"$lib/*": ["./src/lib/*"],
-			"$data": ["./data"],
-			"$data/*": ["./data/*"],
-			"$config": ["./config"],
-			"$config/*": ["./config/*"],
-			"$content": ["./content"],
-			"$content/*": ["./content/*"],
-			"$themes": ["./themes"],
-			"$themes/*": ["./themes/*"]
-		}
+		"outDir": "./build"
 	},
 	"include": [
 		"src/**/*.d.ts",
