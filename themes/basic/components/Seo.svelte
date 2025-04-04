@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { website } from 'config/website.js';
-	import { PageMetaTags } from '@sveltinio/seo/metadata';
+	import { PageMetaTags } from '@indaco/sveo/metadata';
 	import {
 		JsonLdWebSite,
 		JsonLdBreadcrumbs,
 		JsonLdWebPage,
 		JsonLdSiteNavigationElements
-	} from '@sveltinio/seo/schemaorg';
+	} from '@indaco/sveo/schemaorg';
 	import { menu } from 'config/menu.js';
 </script>
 
